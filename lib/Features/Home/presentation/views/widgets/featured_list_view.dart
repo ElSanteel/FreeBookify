@@ -1,4 +1,4 @@
-import 'package:book_store_app/Features/Home/presentation/views/widgets/custom_list_view_item.dart';
+import 'package:book_store_app/Features/Home/presentation/views/widgets/featured_list_view_item.dart';
 import 'package:book_store_app/core/utils/size_config.dart';
 import 'package:flutter/material.dart';
 
