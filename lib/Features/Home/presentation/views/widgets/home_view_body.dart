@@ -2,6 +2,7 @@ import 'package:book_store_app/Features/Home/presentation/views/widgets/custom_a
 import 'package:book_store_app/Features/Home/presentation/views/widgets/featured_list_view.dart';
 import 'package:book_store_app/constants.dart';
 import 'package:book_store_app/core/utils/assets.dart';
+import 'package:book_store_app/core/utils/size_config.dart';
 import 'package:book_store_app/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
@@ -11,16 +12,16 @@ class HomeViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Padding(
-      padding: EdgeInsets.symmetric(horizontal: 15),
+      padding: EdgeInsets.symmetric(horizontal: 30),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           CustomAppBar(),
           FeaturedBooksListView(),
           SizedBox(
-            height: 16,
+            height: 20,
           ),
-          Text("Best Seller", style: Styles.TextStyle18),
+          Text("Best Seller", style: Styles.textStyle18),
           SizedBox(height: 15),
           BestSellerListViewItem()
         ],
@@ -52,10 +53,20 @@ class BestSellerListViewItem extends StatelessWidget {
             ),
           ),
           const SizedBox(
-            width: 29,
+            width: 30,
           ),
-          const Column(
-            children: [Text("Harry Potter")],
+          Column(
+            children: [
+              SizedBox(
+                width: SizeConfig.screenWidth! * 0.5,
+                child: const Text(
+                  "Harry Potter and the Goblet of Fire",
+                  style: Styles.textStyle20,
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                ),
+              )
+            ],
           )
         ],
       ),
