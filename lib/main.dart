@@ -1,4 +1,4 @@
-import 'package:book_store_app/Features/Splash%20View/presentation/views/splash_view.dart';
+import 'package:book_store_app/Features/Splash/presentation/views/splash_view.dart';
 import 'package:book_store_app/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

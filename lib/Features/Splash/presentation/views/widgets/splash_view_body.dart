@@ -1,5 +1,5 @@
 import 'package:book_store_app/Features/Home/presentation/views/home_view.dart';
-import 'package:book_store_app/Features/Splash%20View/presentation/views/widgets/sliding_text.dart';
+import 'package:book_store_app/Features/Splash/presentation/views/widgets/sliding_text.dart';
 import 'package:book_store_app/constants.dart';
 import 'package:book_store_app/core/utils/assets.dart';
 import 'package:book_store_app/core/utils/size_config.dart';
