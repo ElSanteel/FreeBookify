@@ -1,6 +1,7 @@
 import 'package:book_store_app/Features/Home/presentation/views/widgets/custom_book_details_app_bar.dart';
 import 'package:book_store_app/Features/Home/presentation/views/widgets/custom_book_image.dart';
 import 'package:book_store_app/core/utils/size_config.dart';
+import 'package:book_store_app/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
 class BookDetailsViewBody extends StatelessWidget {
@@ -12,13 +13,26 @@ class BookDetailsViewBody extends StatelessWidget {
       padding: EdgeInsets.symmetric(
           horizontal: SizeConfig.screenWidth! * 0.05,
           vertical: SizeConfig.screenHeight! * 0.03),
-      child: const Column(
+      child: Column(
         children: [
-          CustomBookDetailsAppBar(),
-          Padding(
+          const CustomBookDetailsAppBar(),
+          const Padding(
             padding: EdgeInsets.symmetric(horizontal: 106),
             child: CustomBookImage(),
-          )
+          ),
+          const SizedBox(height: 43),
+          Text(
+            "The Jungle Book",
+            style: Styles.textStyle30.copyWith(fontWeight: FontWeight.bold),
+          ),
+          const SizedBox(
+            height: 6,
+          ),
+          Text(
+            "Rudyard Kipling",
+            style: Styles.textStyle18.copyWith(
+                fontStyle: FontStyle.italic, fontWeight: FontWeight.w500),
+          ),
         ],
       ),
     );
