@@ -1,4 +1,5 @@
 import 'package:book_store_app/Features/Splash%20View/presentation/views/widgets/splash_view_body.dart';
+import 'package:book_store_app/core/utils/size_config.dart';
 import 'package:flutter/material.dart';
 
 class SplashView extends StatelessWidget {
@@ -6,6 +7,7 @@ class SplashView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);
     return const Scaffold(
       body: SplashViewBody(),
     );
