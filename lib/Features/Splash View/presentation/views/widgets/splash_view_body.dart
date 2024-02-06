@@ -22,7 +22,6 @@ class _SplashViewBodyState extends State<SplashViewBody>
   void initState() {
     super.initState();
     initSlidingAnimation();
-    navigateToHome();
   }
 
   @override
@@ -57,6 +56,12 @@ class _SplashViewBodyState extends State<SplashViewBody>
     slidingAnimation =
         Tween<Offset>(begin: const Offset(0, 3), end: Offset.zero)
             .animate(animationController);
+
+    animationController.addStatusListener((status) {
+      if (status == AnimationStatus.completed) {
+        navigateToHome();
+      }
+    });
     animationController.forward();
   }
 
