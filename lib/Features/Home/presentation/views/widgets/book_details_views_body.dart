@@ -1,3 +1,4 @@
+import 'package:book_store_app/Features/Home/presentation/views/widgets/book_rating.dart';
 import 'package:book_store_app/Features/Home/presentation/views/widgets/custom_book_details_app_bar.dart';
 import 'package:book_store_app/Features/Home/presentation/views/widgets/custom_book_image.dart';
 import 'package:book_store_app/core/utils/size_config.dart';
@@ -28,11 +29,20 @@ class BookDetailsViewBody extends StatelessWidget {
           const SizedBox(
             height: 6,
           ),
-          Text(
-            "Rudyard Kipling",
-            style: Styles.textStyle18.copyWith(
-                fontStyle: FontStyle.italic, fontWeight: FontWeight.w500),
+          Opacity(
+            opacity: 0.7,
+            child: Text(
+              "Rudyard Kipling",
+              style: Styles.textStyle18.copyWith(
+                  fontStyle: FontStyle.italic, fontWeight: FontWeight.w500),
+            ),
           ),
+          const SizedBox(
+            height: 18,
+          ),
+          const BookRating(
+            mainAxisAlignment: MainAxisAlignment.center,
+          )
         ],
       ),
     );
