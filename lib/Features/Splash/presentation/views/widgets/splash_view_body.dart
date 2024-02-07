@@ -1,4 +1,4 @@
-import 'package:book_store_app/Features/Splash/presentation/views/widgets/sliding_text.dart';
+import 'package:book_store_app/Features/splash/presentation/views/widgets/sliding_text.dart';
 import 'package:book_store_app/core/utils/assets.dart';
 import 'package:book_store_app/core/utils/routes.dart';
 import 'package:book_store_app/core/utils/size_config.dart';
@@ -65,8 +65,8 @@ class _SplashViewBodyState extends State<SplashViewBody>
   }
 
   void navigateToHome() {
-  Future.delayed(const Duration(seconds: 2), (){
-  GoRouter.of(context).push(AppRouter.kHomeView);
-  });
+    Future.delayed(const Duration(seconds: 2), () {
+      GoRouter.of(context).push(AppRouter.kHomeView);
+    });
   }
 }

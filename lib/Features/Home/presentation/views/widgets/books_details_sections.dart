@@ -1,6 +1,6 @@
-import 'package:book_store_app/Features/Home/presentation/views/widgets/book_rating.dart';
-import 'package:book_store_app/Features/Home/presentation/views/widgets/books_action.dart';
-import 'package:book_store_app/Features/Home/presentation/views/widgets/custom_book_image.dart';
+import 'package:book_store_app/Features/home/presentation/views/widgets/book_rating.dart';
+import 'package:book_store_app/Features/home/presentation/views/widgets/books_action.dart';
+import 'package:book_store_app/Features/home/presentation/views/widgets/custom_book_image.dart';
 import 'package:book_store_app/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 

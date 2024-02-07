@@ -1,6 +1,6 @@
-import 'package:book_store_app/Features/Home/presentation/views/widgets/books_details_sections.dart';
-import 'package:book_store_app/Features/Home/presentation/views/widgets/custom_book_details_app_bar.dart';
-import 'package:book_store_app/Features/Home/presentation/views/widgets/similar_books_section.dart';
+import 'package:book_store_app/Features/home/presentation/views/widgets/books_details_sections.dart';
+import 'package:book_store_app/Features/home/presentation/views/widgets/custom_book_details_app_bar.dart';
+import 'package:book_store_app/Features/home/presentation/views/widgets/similar_books_section.dart';
 import 'package:book_store_app/core/utils/size_config.dart';
 import 'package:flutter/material.dart';
 

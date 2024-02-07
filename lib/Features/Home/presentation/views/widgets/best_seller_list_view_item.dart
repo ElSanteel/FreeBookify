@@ -1,4 +1,4 @@
-import 'package:book_store_app/Features/Home/presentation/views/widgets/book_rating.dart';
+import 'package:book_store_app/Features/home/presentation/views/widgets/book_rating.dart';
 import 'package:book_store_app/constants.dart';
 import 'package:book_store_app/core/utils/assets.dart';
 import 'package:book_store_app/core/utils/routes.dart';
