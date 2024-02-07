@@ -1,4 +1,3 @@
-import 'package:book_store_app/Features/home/presentation/views/widgets/newest_books_list_view_item.dart';
 import 'package:flutter/material.dart';
 
 class SearchResultListView extends StatelessWidget {
@@ -9,7 +8,11 @@ class SearchResultListView extends StatelessWidget {
     return ListView.builder(
       itemCount: 10,
       itemBuilder: (context, index) {
-        return const BookListViewItem();
+        return const Padding(
+          padding: EdgeInsets.symmetric(horizontal: 10.0),
+          // child: BookListViewItem(bookModel: BookModel,),
+          child: Text("sadas"),
+        );
       },
     );
   }
