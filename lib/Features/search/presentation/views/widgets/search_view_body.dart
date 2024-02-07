@@ -1,6 +1,7 @@
 import 'package:book_store_app/Features/search/presentation/views/widgets/custom_search_text_field.dart';
+import 'package:book_store_app/Features/search/presentation/views/widgets/search_result_view.dart';
+import 'package:book_store_app/core/utils/styles.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class SearchViewBody extends StatelessWidget {
   const SearchViewBody({super.key});
@@ -10,7 +11,15 @@ class SearchViewBody extends StatelessWidget {
     return const Padding(
       padding: EdgeInsets.symmetric(horizontal: 30),
       child: Column(
-        children: [CustomSearchTextField()],
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          CustomSearchTextField(),
+          SizedBox(
+            height: 16,
+          ),
+          Text("Search Result", style: Styles.textStyle18),
+          Expanded(child: SearchResultListView())
+        ],
       ),
     );
   }
