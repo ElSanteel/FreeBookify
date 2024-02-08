@@ -58,15 +58,21 @@ class _SplashViewBodyState extends State<SplashViewBody>
 
     animationController.addStatusListener((status) {
       if (status == AnimationStatus.completed) {
-        navigateToHome();
+        navigateToWelcome();
       }
     });
     animationController.forward();
   }
 
-  void navigateToHome() {
-    Future.delayed(const Duration(seconds: 2), () {
-      GoRouter.of(context).push(AppRouter.kHomeView);
+  // void navigateToHome() {
+  //   Future.delayed(const Duration(seconds: 2), () {
+  //     GoRouter.of(context).push(AppRouter.kHomeView);
+  //   });
+  // }
+
+  void navigateToWelcome() {
+    Future.delayed(const Duration(seconds: 3), () {
+      GoRouter.of(context).push(AppRouter.kWelcomeView);
     });
   }
 }
