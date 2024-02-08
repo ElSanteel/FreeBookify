@@ -81,12 +81,6 @@ class _SplashViewBodyState extends State<SplashViewBody>
   //   });
   // }
 
-  // void navigateToWelcome() {
-  //   Future.delayed(const Duration(seconds: 3), () {
-  //     GoRouter.of(context).push(AppRouter.kWelcomeView);
-  //   });
-  // }
-
   dynamic route(BuildContext context) {
     Future.delayed(Duration.zero);
     if (SharedPreferenceHelper.getData(key: userTokenKey) == null) {

@@ -1,13 +1,14 @@
 import 'package:book_store_app/Features/authentication/data/models/register_request_model.dart';
 import 'package:book_store_app/Features/authentication/presentation/manager/login_cubit.dart';
 import 'package:book_store_app/Features/authentication/presentation/manager/register_cubit.dart';
-import 'package:book_store_app/Features/authentication/presentation/views/login_view.dart';
 import 'package:book_store_app/Features/authentication/presentation/views/widgets/custom_text_field.dart';
 import 'package:book_store_app/constants.dart';
+import 'package:book_store_app/core/utils/routes.dart';
 import 'package:book_store_app/core/utils/size_config.dart';
 import 'package:book_store_app/core/utils/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 
 class RegisterViewBody extends StatelessWidget {
   const RegisterViewBody({super.key});
@@ -20,12 +21,7 @@ class RegisterViewBody extends StatelessWidget {
           ScaffoldMessenger.of(context).showSnackBar(
             const SnackBar(content: Text('Register Successful')),
           );
-          Navigator.pushAndRemoveUntil(
-            context,
-            MaterialPageRoute(
-                builder: (BuildContext context) => const LoginView()),
-            (route) => false,
-          );
+          GoRouter.of(context).push(AppRouter.kLoginView);
         } else if (state is UserRegisterErrorState) {
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(content: Text(state.registerErrorMessage)),
