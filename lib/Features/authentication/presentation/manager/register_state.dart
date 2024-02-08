@@ -10,7 +10,7 @@ class UserRegisterLoadingState extends RegisterState {}
 class UserRegisterSuccessState extends RegisterState {}
 
 class UserRegisterErrorState extends RegisterState {
-  String registerErrorMessage;
+  final String registerErrorMessage;
 
   UserRegisterErrorState(this.registerErrorMessage);
 }
@@ -21,4 +21,10 @@ class RegisterPasswordVisibilityChangedState extends RegisterState {
   final bool isVisible;
 
   RegisterPasswordVisibilityChangedState(this.isVisible);
+}
+
+class RegisterConfirmPasswordVisibilityChangedState extends RegisterState {
+  final bool isVisible;
+
+  RegisterConfirmPasswordVisibilityChangedState(this.isVisible);
 }

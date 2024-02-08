@@ -6,7 +6,6 @@ import 'package:book_store_app/core/utils/dio_helper.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-
 part 'register_state.dart';
 
 class RegisterCubit extends Cubit<RegisterState> {
@@ -21,11 +20,18 @@ class RegisterCubit extends Cubit<RegisterState> {
   TextEditingController registerConfirmationPasswordController =
       TextEditingController();
 
-  bool isVisible = true;
+  bool isVisiblePassword = true;
+  bool isVisibleConfirmPassword = true;
 
   void registerTogglePasswordVisibility() {
-    isVisible = !isVisible;
-    emit(RegisterPasswordVisibilityChangedState(isVisible));
+    isVisiblePassword = !isVisiblePassword;
+    emit(RegisterPasswordVisibilityChangedState(isVisiblePassword));
+  }
+
+  void registerToggleConfirmPasswordVisibility() {
+    isVisibleConfirmPassword = !isVisibleConfirmPassword;
+    emit(RegisterConfirmPasswordVisibilityChangedState(
+        isVisibleConfirmPassword));
   }
 
   int selectedGender = 0;
