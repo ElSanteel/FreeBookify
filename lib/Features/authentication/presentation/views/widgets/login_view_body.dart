@@ -42,8 +42,8 @@ class LoginViewBody extends StatelessWidget {
           key: cubit.loginFormKey,
           child: SingleChildScrollView(
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
               children: [
+                const SizedBox(height: 50),
                 Image.asset(
                   "assets/images/logo.png",
                   width: SizeConfig.screenWidth! * 0.5,
