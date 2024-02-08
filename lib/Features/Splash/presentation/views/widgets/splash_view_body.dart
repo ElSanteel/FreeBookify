@@ -1,6 +1,8 @@
 import 'package:book_store_app/Features/splash/presentation/views/widgets/sliding_text.dart';
+import 'package:book_store_app/constants.dart';
 import 'package:book_store_app/core/utils/assets.dart';
 import 'package:book_store_app/core/utils/routes.dart';
+import 'package:book_store_app/core/utils/shared_preference_helper.dart';
 import 'package:book_store_app/core/utils/size_config.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -21,12 +23,15 @@ class _SplashViewBodyState extends State<SplashViewBody>
   void initState() {
     super.initState();
     initSlidingAnimation();
+    // WidgetsBinding.instance.addPostFrameCallback((_) {
+    //   route(context);
+    // });
   }
 
   @override
   void dispose() {
-    super.dispose();
     animationController.dispose();
+    super.dispose();
   }
 
   @override
@@ -49,7 +54,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
   void initSlidingAnimation() {
     animationController = AnimationController(
       vsync: this,
-      duration: const Duration(seconds: 2),
+      duration: const Duration(seconds: 3),
     );
 
     slidingAnimation =
@@ -58,7 +63,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
 
     animationController.addStatusListener((status) {
       if (status == AnimationStatus.completed) {
-        navigateToWelcome();
+        route(context);
       }
     });
     animationController.forward();
@@ -70,9 +75,24 @@ class _SplashViewBodyState extends State<SplashViewBody>
   //   });
   // }
 
-  void navigateToWelcome() {
-    Future.delayed(const Duration(seconds: 3), () {
+  // void navigateToWelcome() {
+  //   Future.delayed(const Duration(seconds: 3), () {
+  //     GoRouter.of(context).push(AppRouter.kWelcomeView);
+  //   });
+  // }
+
+  // void navigateToWelcome() {
+  //   Future.delayed(const Duration(seconds: 3), () {
+  //     GoRouter.of(context).push(AppRouter.kWelcomeView);
+  //   });
+  // }
+
+  dynamic route(BuildContext context) {
+    Future.delayed(Duration.zero);
+    if (SharedPreferenceHelper.getData(key: userTokenKey) == null) {
       GoRouter.of(context).push(AppRouter.kWelcomeView);
-    });
+    } else {
+      GoRouter.of(context).push(AppRouter.kHomeView);
+    }
   }
 }

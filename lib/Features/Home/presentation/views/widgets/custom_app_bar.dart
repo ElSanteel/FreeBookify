@@ -1,7 +1,8 @@
+import 'package:book_store_app/constants.dart';
 import 'package:book_store_app/core/utils/assets.dart';
 import 'package:book_store_app/core/utils/routes.dart';
+import 'package:book_store_app/core/utils/shared_preference_helper.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:go_router/go_router.dart';
 
 class CustomAppBar extends StatelessWidget {
@@ -20,10 +21,15 @@ class CustomAppBar extends StatelessWidget {
           ),
           IconButton(
               onPressed: () {
-                GoRouter.of(context).push(AppRouter.kSearchView);
+                // GoRouter.of(context).push(AppRouter.kSearchView);
+                SharedPreferenceHelper.removeData(key: userTokenKey);
+                SharedPreferenceHelper.removeData(key: userNameTokenKey);
+
+                GoRouter.of(context).push(AppRouter.kLoginView);
               },
               icon: const Icon(
-                FontAwesomeIcons.magnifyingGlass,
+                // FontAwesomeIcons.magnifyingGlass,
+                Icons.logout,
                 size: 30,
               ))
         ],

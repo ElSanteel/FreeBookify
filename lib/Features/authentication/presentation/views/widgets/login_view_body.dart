@@ -1,7 +1,6 @@
 import 'package:book_store_app/Features/authentication/data/models/login_request_model.dart';
 import 'package:book_store_app/Features/authentication/presentation/manager/login_cubit.dart';
 import 'package:book_store_app/Features/authentication/presentation/views/widgets/custom_text_field.dart';
-import 'package:book_store_app/Features/home/presentation/views/home_view.dart';
 import 'package:book_store_app/constants.dart';
 import 'package:book_store_app/core/utils/routes.dart';
 import 'package:book_store_app/core/utils/size_config.dart';
